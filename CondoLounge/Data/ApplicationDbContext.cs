@@ -17,6 +17,16 @@ namespace CondoLounge.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Condo>()
+                .HasOne(c=>c.Building)
+                .WithMany(b => b.Condos)
+                .HasForeignKey(b => b.BuildingId)
+                .OnDelete(DeleteBehavior.NoAction);           
+            modelBuilder.Entity<ApplicationUser>()
+                .HasOne(u=>u.Building)
+                .WithMany(b => b.Users)
+                .HasForeignKey(u => u.BuildingId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
