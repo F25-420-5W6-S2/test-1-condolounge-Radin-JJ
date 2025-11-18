@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CondoLounge.Data.Repositories
 {
-    public class CondoLoungeGenericGenericRepository<T> : ICondoLoungeGenericRepository<T> where T : class
+    public class CondoLoungeGenericGenericRepository<T> : ICondoLounge<T> where T : class
     {
         internal readonly ILogger<CondoLoungeGenericGenericRepository<T>> _logger;
         internal readonly ApplicationDbContext _context;

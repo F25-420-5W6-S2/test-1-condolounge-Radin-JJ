@@ -16,9 +16,9 @@ namespace CondoLounge.Data.Repositories.Helpers
         }
 
         public ApplicationDbContext DbContext { get; set; }
-        public ICondoLoungeGenericRepository<T>? GetRepositoryForEntityType<T>() where T : class
+        public ICondoLounge<T>? GetRepositoryForEntityType<T>() where T : class
         {
-            return GetRepository<ICondoLoungeGenericRepository<T>>(
+            return GetRepository<ICondoLounge<T>>(
                     _repositoryFactories.GetRepositoryFactoryForEntityType<T>());
         }
 
