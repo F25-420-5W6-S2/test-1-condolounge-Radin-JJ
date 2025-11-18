@@ -82,6 +82,8 @@ namespace CondoLounge.Areas.Identity.Pages.Account
 
             [Required]
             public string BuildingId { get; set; }
+            [Required]
+            public string CondoNumber { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
