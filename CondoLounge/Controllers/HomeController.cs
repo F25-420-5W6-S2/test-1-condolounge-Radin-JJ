@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CondoLounge.Models;
+using CondoLounge.Areas.Identity.Pages.Account;
 
 namespace CondoLounge.Controllers;
 
@@ -19,6 +20,10 @@ public class HomeController : Controller
     }
 
     public IActionResult Privacy()
+    {
+        return View();
+    }
+    public IActionResult Register()
     {
         return View();
     }
